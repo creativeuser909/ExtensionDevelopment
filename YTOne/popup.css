@@ -1,0 +1,13 @@
+body{
+    background: f1f5f9;
+}
+.wrapper{
+    width: 175px;
+    text-align: center !important;
+}
+.copyLocationButton{
+    width: 60px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
