@@ -1,0 +1,15 @@
+function ytscript(indexNum) {
+	var gridRow = document.querySelectorAll("ytd-rich-grid-row.style-scope.ytd-rich-grid-renderer");
+	var contentDiv = gridRow[indexNum].querySelectorAll("#content.style-scope.ytd-rich-item-renderer");
+	if (contentDiv.length > 0) {
+		var rect = contentDiv[1].getBoundingClientRect();
+		var centerX = rect.left + rect.width / 2;
+		var centerY = rect.top + rect.height / 2;
+	}
+	if(centerY < 190){
+		return ytscript(indexNum+1);
+	}
+	return [centerX, centerY];
+}
+var result = ytscript(0);
+console.log(result[0], result[1]);
